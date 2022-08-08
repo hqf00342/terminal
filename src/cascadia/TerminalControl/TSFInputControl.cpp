@@ -120,9 +120,9 @@ namespace winrt::Microsoft::Terminal::Control::implementation
             TextBlock().Text(L"");
             const auto bufLen = ::base::ClampedNumeric<int32_t>(_inputBuffer.length());
             _inputBuffer.clear();
-            _editContext.NotifyFocusLeave();
+            //_editContext.NotifyFocusLeave();
             _editContext.NotifyTextChanged({ 0, bufLen }, 0, { 0, 0 });
-            _editContext.NotifyFocusEnter();
+            //_editContext.NotifyFocusEnter();
             _activeTextStart = 0;
             _inComposition = false;
         }
